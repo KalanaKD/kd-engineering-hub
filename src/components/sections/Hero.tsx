@@ -128,18 +128,14 @@ export function Hero() {
           transition={{ delay: 1.15, duration: 0.6, ease: easeOutSmooth }}
           className="mt-10 flex flex-wrap items-center gap-3"
         >
-          <button onClick={() => smoothScrollTo("projects")} className="contents">
-            <MagneticButton variant="primary">
-              View Projects
-              <ArrowRight className="h-4 w-4" />
-            </MagneticButton>
-          </button>
-          <a href="/resume.pdf" download className="contents">
-            <MagneticButton variant="secondary">
-              <FileDown className="h-4 w-4" />
-              Download Resume
-            </MagneticButton>
-          </a>
+          <MagneticButton variant="primary" onClick={() => smoothScrollTo("projects")}>
+            View Projects
+            <ArrowRight className="h-4 w-4" />
+          </MagneticButton>
+          <MagneticLink variant="secondary" href="/resume.pdf" download>
+            <FileDown className="h-4 w-4" />
+            Download Resume
+          </MagneticLink>
         </motion.div>
 
         <motion.ul
