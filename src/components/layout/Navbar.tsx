@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion, LayoutGroup } from "framer-motion";
 import { Menu, X, FileDown } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
-import { MagneticButton } from "@/components/ui/magnetic-button";
+import { MagneticButton, MagneticLink } from "@/components/ui/magnetic-button";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { cn } from "@/lib/utils";
 import logoAsset from "@/assets/kd-logo.png.asset.json";
@@ -96,17 +96,16 @@ export function Navbar() {
 
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <a
+            <MagneticLink
               href="/resume.pdf"
               download
               data-cursor="link"
-              className="hidden md:inline-flex"
+              variant="secondary"
+              className="hidden h-9 px-4 text-xs md:inline-flex"
             >
-              <MagneticButton variant="secondary" className="h-9 px-4 text-xs">
-                <FileDown className="h-3.5 w-3.5" />
-                Resume
-              </MagneticButton>
-            </a>
+              <FileDown className="h-3.5 w-3.5" />
+              Resume
+            </MagneticLink>
             <button
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Close menu" : "Open menu"}

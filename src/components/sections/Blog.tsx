@@ -1,7 +1,7 @@
 import { ArrowUpRight, BookOpen } from "lucide-react";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
-import { MagneticButton } from "@/components/ui/magnetic-button";
+import { MagneticLink } from "@/components/ui/magnetic-button";
 import { TagChip } from "@/components/ui/tag-chip";
 import { blog } from "@/data/blog";
 
@@ -18,12 +18,16 @@ export function Blog() {
             />
           </Reveal>
           <Reveal>
-            <a href="https://medium.com/" target="_blank" rel="noreferrer" data-cursor="link">
-              <MagneticButton variant="secondary">
-                <BookOpen className="h-4 w-4" />
-                Visit Medium Profile
-              </MagneticButton>
-            </a>
+            <MagneticLink
+              variant="secondary"
+              href="https://medium.com/"
+              target="_blank"
+              rel="noreferrer"
+              data-cursor="link"
+            >
+              <BookOpen className="h-4 w-4" />
+              Visit Medium Profile
+            </MagneticLink>
           </Reveal>
         </div>
 

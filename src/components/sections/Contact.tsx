@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Mail, Github, Linkedin, BookOpen, FileDown, Send, Check } from "lucide-react";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
-import { MagneticButton } from "@/components/ui/magnetic-button";
+import { MagneticButton, MagneticLink } from "@/components/ui/magnetic-button";
 import { WaveformBackground } from "@/components/waveform/WaveformBackground";
 import { socials } from "@/data/socials";
 import type { LucideIcon } from "lucide-react";
@@ -82,12 +82,10 @@ export function Contact() {
           </Reveal>
 
           <Reveal delay={0.2}>
-            <a href="/resume.pdf" download>
-              <MagneticButton variant="secondary">
-                <FileDown className="h-4 w-4" />
-                Download Resume
-              </MagneticButton>
-            </a>
+            <MagneticLink variant="secondary" href="/resume.pdf" download>
+              <FileDown className="h-4 w-4" />
+              Download Resume
+            </MagneticLink>
           </Reveal>
         </div>
 
