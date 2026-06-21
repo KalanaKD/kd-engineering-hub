@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import CountUp from "react-countup";
 
 interface Props {
   value: number;
@@ -9,6 +8,8 @@ interface Props {
   className?: string;
 }
 
+const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+
 export function AnimatedCounter({
   value,
   suffix = "",
@@ -16,32 +17,38 @@ export function AnimatedCounter({
   duration = 1.8,
   className,
 }: Props) {
-  const [start, setStart] = useState(false);
+  const [n, setN] = useState(0);
   const ref = useRef<HTMLSpanElement | null>(null);
+  const started = useRef(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      ([e]) => {
-        if (e.isIntersecting) {
-          setStart(true);
-          obs.disconnect();
-        }
+      ([entry]) => {
+        if (!entry.isIntersecting || started.current) return;
+        started.current = true;
+        const start = performance.now();
+        const dur = duration * 1000;
+        const tick = (now: number) => {
+          const t = Math.min(1, (now - start) / dur);
+          setN(Math.round(easeOutCubic(t) * value));
+          if (t < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        obs.disconnect();
       },
       { threshold: 0.4 },
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, []);
+  }, [value, duration]);
 
   return (
     <span ref={ref} className={className}>
-      {start ? (
-        <CountUp end={value} duration={duration} prefix={prefix} suffix={suffix} />
-      ) : (
-        <span>{prefix}0{suffix}</span>
-      )}
+      {prefix}
+      {n}
+      {suffix}
     </span>
   );
 }
