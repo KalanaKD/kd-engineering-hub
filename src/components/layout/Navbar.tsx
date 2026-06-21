@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion, LayoutGroup } from "framer-motion";
 import { Menu, X, FileDown } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
-import { MagneticButton, MagneticLink } from "@/components/ui/magnetic-button";
+import { MagneticLink } from "@/components/ui/magnetic-button";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { cn } from "@/lib/utils";
 import logoAsset from "@/assets/kd-logo.png.asset.json";
