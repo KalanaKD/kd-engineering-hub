@@ -146,16 +146,15 @@ export function Navbar() {
                   {item.label}
                 </motion.button>
               ))}
-              <a
+              <MagneticLink
                 href="/resume.pdf"
                 download
-                className="mt-8"
+                variant="primary"
+                className="mt-8 w-full"
               >
-                <MagneticButton variant="primary" className="w-full">
-                  <FileDown className="h-4 w-4" />
-                  Download Resume
-                </MagneticButton>
-              </a>
+                <FileDown className="h-4 w-4" />
+                Download Resume
+              </MagneticLink>
             </nav>
           </motion.div>
         )}
