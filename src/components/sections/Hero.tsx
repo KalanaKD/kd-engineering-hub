@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, FileDown } from "lucide-react";
-import { MagneticButton } from "@/components/ui/magnetic-button";
+import { MagneticButton, MagneticLink } from "@/components/ui/magnetic-button";
 import { WaveformBackground } from "@/components/waveform/WaveformBackground";
 import { easeOutSmooth } from "@/lib/easings";
 import logoAsset from "@/assets/kd-logo.png.asset.json";
