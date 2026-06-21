@@ -41,6 +41,7 @@ const personJsonLd = {
 };
 
 export const Route = createFileRoute("/")({
+  ssr: false,
   head: () => ({
     meta: [
       { title: TITLE },
