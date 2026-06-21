@@ -90,6 +90,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Kalana Dilshan" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Kalana Dilshan — Associate Software Engineer" },
+      { name: "twitter:title", content: "Kalana Dilshan — Associate Software Engineer" },
+      { name: "description", content: "A premium personal portfolio website showcasing a Software Engineer's technical expertise, ambition, and professional journey." },
+      { property: "og:description", content: "A premium personal portfolio website showcasing a Software Engineer's technical expertise, ambition, and professional journey." },
+      { name: "twitter:description", content: "A premium personal portfolio website showcasing a Software Engineer's technical expertise, ambition, and professional journey." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/tVzZnJ4YRvWQnM7LnE6nCL2WsbP2/social-images/social-1782068451945-kd-logo.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/tVzZnJ4YRvWQnM7LnE6nCL2WsbP2/social-images/social-1782068451945-kd-logo.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
