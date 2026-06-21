@@ -5,7 +5,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { MagneticLink } from "@/components/ui/magnetic-button";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/kd-logo.png.asset.json";
+import logoAsset from "@/assets/kd-logo.png";
 
 const NAV = [
   { id: "about", label: "About" },
@@ -58,7 +58,7 @@ export function Navbar() {
             className="flex items-center gap-2 font-display text-base tracking-tight"
             aria-label="KD — home"
           >
-            <img src={logoAsset.url} alt="" className="h-7 w-7 object-contain" />
+            <img src={logoAsset} alt="" className="h-7 w-7 object-contain" />
             <span className="hidden sm:inline">KD</span>
           </button>
 

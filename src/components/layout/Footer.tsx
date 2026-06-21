@@ -1,7 +1,7 @@
 import { Github, Linkedin, Mail, BookOpen } from "lucide-react";
 import { socials } from "@/data/socials";
 import { WaveDivider } from "@/components/waveform/WaveDivider";
-import logoAsset from "@/assets/kd-logo.png.asset.json";
+import logoAsset from "@/assets/kd-logo.png";
 
 const ICONS = { Github, Linkedin, Mail, BookOpen } as const;
 
@@ -22,7 +22,7 @@ export function Footer() {
       <div className="container-page grid gap-12 py-16 md:grid-cols-3">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-2">
-            <img src={logoAsset.url} alt="" className="h-8 w-8 object-contain" />
+            <img src={logoAsset} alt="" className="h-8 w-8 object-contain" />
             <span className="font-display text-lg">KD</span>
           </div>
           <p className="max-w-xs text-sm text-muted-foreground">

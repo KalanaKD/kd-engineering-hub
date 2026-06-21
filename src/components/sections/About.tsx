@@ -3,7 +3,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { WaveformBackground } from "@/components/waveform/WaveformBackground";
 import { about } from "@/data/about";
-import logoAsset from "@/assets/kd-logo.png.asset.json";
+import logoAsset from "@/assets/kd-logo.png";
 
 export function About() {
   return (
@@ -16,7 +16,7 @@ export function About() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,color-mix(in_oklab,var(--accent-primary)_22%,transparent),transparent_60%)]" />
             <div className="absolute inset-0 bg-grid opacity-50" />
             <img
-              src={logoAsset.url}
+              src={logoAsset}
               alt=""
               className="absolute inset-0 m-auto h-1/2 w-1/2 object-contain opacity-90"
             />

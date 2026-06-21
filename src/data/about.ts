@@ -6,8 +6,8 @@ export const about = {
     "I work across the stack — Java and Spring Boot on the backend, React and TypeScript on the front, with cloud delivery and a research interest in explainable AI tying it together. My focus is becoming a world-class engineer through depth, leverage, and continuous learning.",
   ],
   metrics: [
-    { label: "Projects shipped", value: 24, suffix: "+" },
-    { label: "Years learning", value: 5, suffix: "" },
+    { label: "Projects shipped", value: 3, suffix: "+" },
+    { label: "Years learning", value: 4, suffix: "" },
     { label: "Research areas", value: 3, suffix: "" },
   ],
 };

@@ -4,7 +4,7 @@ import { ArrowRight, FileDown } from "lucide-react";
 import { MagneticButton, MagneticLink } from "@/components/ui/magnetic-button";
 import { WaveformBackground } from "@/components/waveform/WaveformBackground";
 import { easeOutSmooth } from "@/lib/easings";
-import logoAsset from "@/assets/kd-logo.png.asset.json";
+import logoAsset from "@/assets/kd-logo.png";
 
 const HERO_VIDEO =
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260606_154941_df1a96e1-a06f-450c-bd02-d863414cc1a0.mp4";
@@ -155,7 +155,7 @@ export function Hero() {
 
       {/* Micro logo with subtle pulse, bottom-right */}
       <motion.img
-        src={logoAsset.url}
+        src={logoAsset}
         alt=""
         aria-hidden
         className="absolute bottom-6 right-6 hidden h-10 w-10 object-contain opacity-60 md:block"

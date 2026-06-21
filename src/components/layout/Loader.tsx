@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { WaveformPulse } from "@/components/waveform/WaveformPulse";
-import logoAsset from "@/assets/kd-logo.png.asset.json";
+import logoAsset from "@/assets/kd-logo.png";
 
 const SESSION_KEY = "kd-loaded";
 
@@ -51,7 +51,7 @@ export function Loader() {
           </motion.div>
 
           <motion.img
-            src={logoAsset.url}
+            src={logoAsset}
             alt=""
             className="mt-6 h-20 w-20 object-contain"
             initial={{ opacity: 0, scale: 0.96 }}

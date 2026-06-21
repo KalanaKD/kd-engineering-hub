@@ -4,16 +4,16 @@ import type { ExperienceItem } from "@/types/content";
 export const experience: ExperienceItem[] = [
   {
     id: "edu",
-    year: "2021 — 2025",
+    year: "2022 — 2026",
     title: "BSc in Computer Engineering",
-    org: "University",
+    org: "University of Jaffna - Faculty of Engineering",
     description:
       "Foundations in algorithms, distributed systems, computer architecture, and software engineering.",
     kind: "education",
   },
   {
     id: "intern",
-    year: "2024",
+    year: "2025 Nov - 2026 May",
     title: "Software Engineering Intern",
     org: "Industry placement",
     description:
@@ -22,7 +22,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     id: "associate",
-    year: "2025 — Present",
+    year: "2026 May — Present",
     title: "Associate Software Engineer",
     org: "Current role",
     description:
