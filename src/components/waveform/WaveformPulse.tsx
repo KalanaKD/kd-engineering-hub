@@ -82,12 +82,13 @@ export function WaveformPulse({
             0.5 +
             0.5 *
               Math.sin(t * 2.3 + i * 0.55 + Math.cos(i * 0.31) * 1.5);
-          const h = Math.max(2, env * dyn * height * 0.95);
+          const hRaw = Math.max(2, env * dyn * height * 0.95);
+          const h = Math.round(hRaw * 100) / 100;
           return (
             <rect
               key={i}
-              x={i * step + (step - barW) / 2}
-              y={(height - h) / 2}
+              x={Math.round((i * step + (step - barW) / 2) * 100) / 100}
+              y={Math.round(((height - h) / 2) * 100) / 100}
               width={barW}
               height={h}
               rx={barW / 2}

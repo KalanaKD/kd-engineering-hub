@@ -63,17 +63,20 @@ export function Waveform({
           </linearGradient>
         </defs>
       )}
-      {heights.map((h, i) => (
-        <rect
-          key={i}
-          x={i * step + (step - barW) / 2}
-          y={(height - h) / 2}
-          width={barW}
-          height={h}
-          rx={rounded ? barW / 2 : 0}
-          fill={gradient ? `url(#wg-${id})` : "currentColor"}
-        />
-      ))}
+      {heights.map((h, i) => {
+        const hh = Math.round(h * 100) / 100;
+        return (
+          <rect
+            key={i}
+            x={Math.round((i * step + (step - barW) / 2) * 100) / 100}
+            y={Math.round(((height - hh) / 2) * 100) / 100}
+            width={barW}
+            height={hh}
+            rx={rounded ? barW / 2 : 0}
+            fill={gradient ? `url(#wg-${id})` : "currentColor"}
+          />
+        );
+      })}
     </svg>
   );
 }
